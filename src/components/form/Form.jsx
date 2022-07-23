@@ -2,6 +2,8 @@ import React from 'react'
 import './style.css';
 
 const Form = ({handleSumbit, value, setValue, desc, setDesc}) => {
+  console.log('Form rendering...')
+
   const handleTitle = (e) => {
     setValue(e.target.value);
   }

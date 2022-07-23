@@ -13,6 +13,8 @@ const TodoList = () => {
   const handleSumbit = (e) => {
     e.preventDefault();
 
+    console.log('TodoList rendering...')
+
     let newTodo = {
       id:Date.now(),
       title: value,

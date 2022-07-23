@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 
 const Todo = ({todoData, setTodoData, id, title, desc, isDone,provided, snapshot}) => {
+  console.log('Todo rendering...')
+
   const handleDelete =(id) => {
     let newTodo = todoData.filter((data) => data.id !== id);
     setTodoData(newTodo);

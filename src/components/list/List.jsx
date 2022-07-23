@@ -3,7 +3,10 @@ import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import Todo from '../todo/Todo';
 import './style.css';
 
-const List = ({todoData, setTodoData}) => {
+const List = React.memo(({todoData, setTodoData}) => {
+
+  console.log('List rendering...')
+
   const handleEnd = (result) => {
     if(!result.destination) return;
 
@@ -59,6 +62,6 @@ const List = ({todoData, setTodoData}) => {
       </DragDropContext>
     </div>
   )
-}
+});
 
 export default List

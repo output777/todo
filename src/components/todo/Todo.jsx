@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Todo = ({todoData, setTodoData, id, title, desc, isDone}) => {
+const Todo = ({todoData, setTodoData, id, title, desc, isDone,provided, snapshot}) => {
   const handleDelete =(id) => {
     let newTodo = todoData.filter((data) => data.id !== id);
     setTodoData(newTodo);
@@ -19,7 +19,7 @@ const Todo = ({todoData, setTodoData, id, title, desc, isDone}) => {
 
   if(isDone === true) {
     return (
-      <div className="todo-box">
+      <div className="todo-box" {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} >
       <h2>{title}</h2>
       <p>{desc}</p>
       <button className='redBtn' onClick={() => {
@@ -32,7 +32,7 @@ const Todo = ({todoData, setTodoData, id, title, desc, isDone}) => {
     )
   }else {
     return (
-      <div className="todo-box">
+      <div className="todo-box" {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps}>
       <h2>{title}</h2>
       <p>{desc}</p>
       <button className='redBtn' onClick={() => {

@@ -10,7 +10,7 @@ const TodoList = () => {
   const [value, setValue] = useState('');
   const [desc, setDesc] = useState('');
  
-  const handleSumbit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log('TodoList rendering...')
@@ -30,7 +30,7 @@ const TodoList = () => {
   return (
     <Layout>
       <Header />
-      <Form handleSumbit={handleSumbit} value={value} setValue={setValue} desc={desc} setDesc={setDesc} />
+      <Form handleSumbit={handleSubmit} value={value} setValue={setValue} desc={desc} setDesc={setDesc} />
       <List todoData={todoData} setTodoData={setTodoData} />
     </Layout>
   )

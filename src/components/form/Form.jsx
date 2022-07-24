@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 
-const Form = ({handleSumbit, value, setValue, desc, setDesc}) => {
+const Form = ({handleSubmit, value, setValue, desc, setDesc}) => {
   console.log('Form rendering...')
 
   const handleTitle = (e) => {
@@ -13,7 +13,7 @@ const Form = ({handleSumbit, value, setValue, desc, setDesc}) => {
   }
 
   return (
-    <form className='formContainer' onSubmit={handleSumbit}>
+    <form className='formContainer' onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">제목</label>
         <input
@@ -35,7 +35,7 @@ const Form = ({handleSumbit, value, setValue, desc, setDesc}) => {
         />
       </div>
       <div>
-        <button onClick={handleSumbit}>추가하기</button>
+        <button onClick={handleSubmit}>추가하기</button>
       </div>
     </form>
   )

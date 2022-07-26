@@ -30,7 +30,7 @@ const TodoList = () => {
   return (
     <Layout>
       <Header />
-      <Form handleSumbit={handleSubmit} value={value} setValue={setValue} desc={desc} setDesc={setDesc} />
+      <Form handleSubmit={handleSubmit} value={value} setValue={setValue} desc={desc} setDesc={setDesc} />
       <List todoData={todoData} setTodoData={setTodoData} />
     </Layout>
   )
